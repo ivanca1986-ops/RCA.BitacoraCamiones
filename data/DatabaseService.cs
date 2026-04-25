@@ -22,6 +22,7 @@ public class DatabaseService
             _database = new SQLiteAsyncConnection(dbPath);
 
             await _database.CreateTableAsync<Ingreso>();
+            await _database.CreateTableAsync<Foto>();
         }
         catch (Exception ex)
         {
